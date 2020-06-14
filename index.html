@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .wrap {
+    margin-top: 150px;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+
+    }
+
+    .cube {
+    transform-style: preserve-3d;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    position: relative;
+
+    }
+
+    .cube img {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    opacity: 0.9;
+
+
+    }
+
+    .cube img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(2) {
+    transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(3) {
+    transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(5) {
+    transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    @keyframes loop {
+    from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    to {
+    transform: rotateX(-360deg) rotateY(360deg) rotateZ(-360deg);
+    }
+    }
+
+    .cube {
+    animation: loop 20s linear infinite;
+    }
+
+</style>
+
+
+<body>
+                    <div class="wrap" style="float: left;">
+                        <div class="cube">
+                            <img src="./cube1/css.png">
+                            <img src="./cube1/html.png">
+                            <img src="./cube1/ag.png">
+                            <img src="./cube1/js.png">
+                            <img src="./cube1/njs.png">
+                            <img src="./cube1/ts.png">
+                        </div>
+                    </div>
+</body>
+</html>
